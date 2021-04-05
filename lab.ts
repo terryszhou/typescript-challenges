@@ -12,6 +12,15 @@ let realNumber: number = 7
 
 // todo: swap the values in the varaibles and log the results
 
+// an intermidiaary var
+let holderVar: string = String(realNumber)
+realNumber = Number(numberString)
+numberString = holderVar
+
+console.log(numberString, typeof numberString)
+console.log(realNumber, typeof realNumber)
+
+
 /* --- Problem #2 - function and mixed array type --- */
 // 1. create an array type that is a mix of strings of numbers and actual numbers
 // ex: [10, '34', 3, '17']
@@ -20,8 +29,26 @@ let realNumber: number = 7
 // ex: stringToNum([10, '34', 3, '17']) => [10, 34, 3, 17]
 
 // Todo write the mixed array of strings and numbers
+let mixedArray: (number | string)[] = [10, '34', 3, '17']
 
 // Todo write a function to convert the mixed array to an array of only numbers
+// const stringToNum = (arr: (number | string)[]): number[] => {
+//   return arr.map( element => Number(element))
+// }
+const stringToNum = (arr: (number | string)[]): number[] => {
+  let newArr: number[] = []
+  arr.forEach(item => {
+    if(typeof(item) === 'string') {
+      newArr.push(parseInt(item))
+    } else {
+      newArr.push(item)
+    }
+  })
+
+  return newArr
+}
+
+console.log(stringToNum(mixedArray))
 
 /* --- Problem #3 - Tuple Type --- */
 // 1. Create a tuple type named 'cityCoordinate' that has three elements: city name, latitute, and longitude
