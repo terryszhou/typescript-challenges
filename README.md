@@ -13,6 +13,8 @@ Lets put our new TypeScript skillz to the test with some exercises!
 
 ### TypeScript Resources
 
+---
+
 #### Reading/tutorials
 
 * Docs are great: [TypeScript Docs / Handbook](https://www.typescriptlang.org/docs)
