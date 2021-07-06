@@ -11,9 +11,9 @@ Lets put our new TypeScript skillz to the test with some exercises!
 * you can auto-compile `lab.ts` everytime you save with the watch command `tsc -w lab.ts`
 * you can see the output of your code in real time by watching the compiled JS file with the command `nodemon tab.js`
 
-## TypeScript Resources
+### TypeScript Resources
 
-### Reading/tutorials
+#### Reading/tutorials
 
 * Docs are great: [TypeScript Docs / Handbook](https://www.typescriptlang.org/docs)
 * Good resource put together by some benevolent dev: [TypeScript Deep Dive by @basarat](https://basarat.gitbooks.io/typescript/)
@@ -22,13 +22,13 @@ Lets put our new TypeScript skillz to the test with some exercises!
 * [Rules of Type Inference](https://www.typescriptlang.org/docs/handbook/type-inference.html)
 * [Learn x in y minutes where x is TypeScript](https://learnxinyminutes.com/docs/typescript/)
 
-### Other Media:
+#### Other Media:
 
 * Podcast episode from Syntax.FM doing high-level chat on [why/where/how of Typescript](https://syntax.fm/show/324/typescript-fundamentals)
 * YouTube Tutorial/overall walkthrough of Typescript that acts as a [long-form codelong/lecture](https://www.youtube.com/watch?v=BwuLxPH8IDs&t=1s)
 * first minute of this video is a great explainer on the [WHY of Typescript](https://www.youtube.com/watch?v=bAB_nNf8-a0)
 
-### TypeScript Shell Commands Cheat Sheet
+#### TypeScript Shell Commands Cheat Sheet
 
 Handy table of TypeScript (and ats related) commands to keep in your back pocket:
 
@@ -44,4 +44,4 @@ Handy table of TypeScript (and ats related) commands to keep in your back pocket
 | `create-react-app --template typescript <react-app-folder-name>` | creates a new react app in a folder called `<react-app-folder-name>` with typescript as the base of the project
 ___
 
-#### HAPPY HACKING!
+##### HAPPY HACKING!
