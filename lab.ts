@@ -32,9 +32,13 @@ console.log(realNumber, typeof realNumber)
 let mixedArray: (number | string)[] = [10, '34', 3, '17']
 
 // Todo write a function to convert the mixed array to an array of only numbers
+
+// map solve
 // const stringToNum = (arr: (number | string)[]): number[] => {
 //   return arr.map( element => Number(element))
 // }
+
+// forEach solve
 const stringToNum = (arr: (number | string)[]): number[] => {
   let newArr: number[] = []
   arr.forEach(item => {
@@ -56,13 +60,17 @@ console.log(stringToNum(mixedArray))
 // uncomment the function to test your solution
 
 // Todo - create the type definition, and some cities
+type cityCoordinate = [string, number, number]
+let seattle: cityCoordinate = ['Seattle', 47.6, 122.2]
+let spokane: cityCoordinate = ['Spokane', 47.7, 117.4]
 
 // 🚨 uncomment this function to test your solution 🚨
-// function printCityData(city: cityCoordinate): void {
-//     console.log(`${city[0]} is at Lat: ${city[1]}, Long: ${city[2]}`);
-// }
+function printCityData(city: cityCoordinate): void {
+    console.log(`${city[0]} is at Lat: ${city[1]}, Long: ${city[2]}`);
+}
 
-// printCityData(seattle);
+printCityData(seattle)
+printCityData(spokane)
 
 /* --- Problem #4 - Interfaces and Union Types --- */
 // Given the following interfaces and type declarations...
@@ -88,5 +96,19 @@ interface Circle {
 }
 
 // Todo - Create union type here
+type Shape = Square | Rectangle | Circle
 
 // Todo - write area function here
+function area(s: Shape): number {
+  if (s.kind === "square") {
+      return s.width * s.width;
+  }
+  else if (s.kind === "rectangle") {
+      return s.width * s.height;
+  }
+  else if (s.kind === "circle") {
+      return Math.PI * (s.radius ** 2);
+  } else {
+      return -1;
+  }
+}

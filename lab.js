@@ -23,9 +23,11 @@ console.log(realNumber, typeof realNumber);
 // Todo write the mixed array of strings and numbers
 var mixedArray = [10, '34', 3, '17'];
 // Todo write a function to convert the mixed array to an array of only numbers
+// map solve
 // const stringToNum = (arr: (number | string)[]): number[] => {
 //   return arr.map( element => Number(element))
 // }
+// forEach solve
 var stringToNum = function (arr) {
     var newArr = [];
     arr.forEach(function (item) {
@@ -39,5 +41,26 @@ var stringToNum = function (arr) {
     return newArr;
 };
 console.log(stringToNum(mixedArray));
-// Todo - Create union type here
+var seattle = ['Seattle', 47.6, 122.2];
+var spokane = ['Spokane', 47.7, 117.4];
+// 🚨 uncomment this function to test your solution 🚨
+function printCityData(city) {
+    console.log(city[0] + " is at Lat: " + city[1] + ", Long: " + city[2]);
+}
+printCityData(seattle);
+printCityData(spokane);
 // Todo - write area function here
+function area(s) {
+    if (s.kind === "square") {
+        return s.width * s.width;
+    }
+    else if (s.kind === "rectangle") {
+        return s.width * s.height;
+    }
+    else if (s.kind === "circle") {
+        return Math.PI * (Math.pow(s.radius, 2));
+    }
+    else {
+        return -1;
+    }
+}
